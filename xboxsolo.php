@@ -1,5 +1,5 @@
 <?php
-
+$n - "Name:";
 $name = $_GET['name'];
 $blank = ".";
         $fh = fopen("xboxsolo.txt", 'a')
