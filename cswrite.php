@@ -13,6 +13,14 @@ $tm1 = "Teammate1:";
 $tm2 = "Teammate2:";
 $tm3 = "Teammate3:";
 $tm4 = "Teammate4:";
+	$file = "file.txt";
+	$f = fopen($file, 'r');
+	$start = false;
+	while ($line = fgets($f, 1000)) {
+		if ($line == '$name' || $line == '$team' ) $start = true;
+		if ($start) throw new Exception('Name already exists');
+	}
+	
 	$fh = fopen("csteams.txt", 'a') 
 		or 
 			die("can't register");
