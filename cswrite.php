@@ -18,7 +18,7 @@ $tm4 = "Teammate4:";
 	$start = false;
 	while ($line = fgets($f, 1000)) {
 		if ($line == '$name' || $line == '$team' ) $start = true;
-		if ($start) throw new Exception('Name already exists');
+		if ($start == true) throw new Exception('Name already exists');
 	}
 	
 	$fh = fopen("csteams.txt", 'a') 
